@@ -1,68 +1,47 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu');
 
-html,body {
+html {
   font-family: "Ubuntu", Helvetica, sans-serif;
   text-align: center;
-  min-width: 320px;
-  background-color: #81BEF7;
+  min-width: 260px;
+  background-color: rgb(106, 174, 236);
 }
 
-#form-outer {
-  background-color: white;
-  margin: 0 auto;
-  border-radius: 4px;
-  padding: 10px;
-  width: 85%;
-  max-width: 900px;
-  padding-top: 10px;
+.wrapper {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+}
+
+.formWrapper {
+    padding: 1em;
+    background-color: white;
+    border-radius: 5px;
+    max-width: 1080px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+}
+
+.header, .footer {
+    grid-column: 1 /-1;
 }
 
 .labels {
-  display: inline-block;
-  text-align: right;
-  vertical-align: top;
-  width: 40%;
-  padding: 5px;
-  margin-top: 10px;
+    justify-items: right;
+    text-align: right;
+    padding: .5em;
 }
 
 .rightTab {
-  display: inline-block;
-  text-align: left;
-  width: 40%;
-  vertical-align: bottom;
+    justify-items: left;
+    text-align: left;
 }
 
-.radio, .checkbox {
-  position: relative;
-  left: -43px;
-  margin-left: 10px;
-  display: block;
-  padding-bottom: 10px;
-}
-
-.input-field {
-  height: 20px;
-  width: 280px;
-  padding: 5px;
-  margin: 10px;
-  border: 1px solid #c0c0c0;
-  border-radius: 2px;
-}
-
-#number {
-  width: 60px;
-}
-
-.dropdown {
-  height: 35px;
-  width: 140px;
-  padding: 5px;
-  margin: 10px;  
-  margin-top: 15px;
-  border: 1px solid #c0c0c0;
-  border-radius: 2px;
-}
+.subtext {
+    color: rgb(58, 58, 58);
+    padding: 0em 1em 0em 1em;
+  }
 
 #submit,
 #reset {
@@ -70,50 +49,38 @@ html,body {
   border-radius: 4px;
   color: white;
   font-size: 1em;
-  height: 40px;
-  width: 96px;
-  margin: 10px;
-  border: 0px solid;
+  height: 2em;
+  width: 5em;
+  margin: 1em;
+  border: 1px solid #c0c0c0;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-  float: left;
-  margin-right: 5px;
+.input-field, .input-field-age, .dropdown {
+    border: 1px solid #c0c0c0;
+    border-radius: 2px;
+    padding: .5em;
 }
 
-/*Everything below is a WIP that I need to check into*/
-
-.radio, .checkbox {
-  position: relative;
-  left: -43px;
-  margin-left: 10px;
-  display: block;
-  padding-bottom: 10px;
+.input-field, .input-field-age {
+    height: 1.5em;
 }
 
-@media screen and (max-width: 833px) {
-  .input-field {
-    width: 80%;
-  }
-  select {
-    width: 90%;
-  }
+.input-field {
+    width: 20em;    
+}
+
+.input-field-age {
+    width: 7em;
+}
+
+.dropdown {
+    height: 2.5em;
+    width: 8em;
+    margin-top: .2em;
 }
 
 @media screen and (max-width: 520px) {
-  .labels {
-    width: 100%;
-    text-align: left;
+    .input-field {
+      width: 10em;
+    }
   }
-  .rightTab {
-    width: 80%;
-    float: left;
-  }
-  .input-field {
-    width: 100%;
-  }
-  select {
-    width: 100%;
-  }
-}
