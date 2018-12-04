@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey Form</title>
+    <link rel="stylesheet" type="text/css" href="/FCCSurveyForm/styles/style.css">
+</head>
+
+<body>
+    <h1 id="title">TITLE OF THIS PAGE RIGHT HERE</h1>
+    <div id="form-outer">
+        <p id="description">Short explanation of the form below goes here! Enjoy:</p>
+        <form id="survey-form">
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="name" id="name-label">* Name:</label>
+                </div>
+                <div class="rightTab">
+                    <input autofocus type="text" id="name" class="input-field" required placeholder="Enter Name">
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="email" id="email-label">* Email:</label>
+                </div>
+                <div class="rightTab">
+                    <input type="email" id="email" class="input-field" required placeholder="Enter Email">
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="number" id="number-label">Age:</label>
+                </div>
+                <div class="rightTab">
+                    <input type="number" id="number" class="input-field" required placeholder="Age..." min="1" max="150">
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="dropdown" id="dropdown-label">Desired Contact Time:</label>
+                </div>
+                <div class="rightTab">
+                    <select id="dropdown" name="contactTime" class="dropdown">
+                        <option disabled selected value>Select One</option>
+                        <option value="morning">Morning</option>
+                        <option value="afternoon">Afternoon</option>
+                        <option value="evening">Evening</option>
+                    </select>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <legend>Choose a number 1 through 3:</br>(Select Only One)</legend>
+                </div>
+                <div class="rightTab">
+                    <!--This only passed the FCC scripted tests when I added the value attribute to the input element. However I'm unsure this is needed for the input element with type="radio".-->
+                    <input type="radio" name="chooseNumber" value="1" checked>
+                    <label for="one">1</label></br>
+
+                    <input type="radio" name="chooseNumber" value="2">
+                    <label for="two">2</label></br>
+
+                    <input type="radio" name="chooseNumber" value="3">
+                    <label for="three">3</label>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <legend>Ways this webpage could be improved:</br>(Check all that apply)</legend>
+                </div>
+                <div class="rightTab">
+                    <input type="checkbox" id="background" name="improvement" value="background" checked>
+                    <label for="background">Background</label></br>
+                    <input type="checkbox" id="picture" name="improvement" value="picture">
+                    <label for="picture">Pictures</label></br>
+                    <input type="checkbox" id="format" name="improvement" value="format">
+                    <label for="format">Formatting</label>
+                </div>
+            </div>
+            <div class="rowTab">
+                <div class="labels">
+                    <label for="name" id="name-label">Additional Comments:</label>
+                </div>
+                <div class="rightTab">
+                    <textarea id="comments" class="input-field" style="height:50px;resize:vertical;" placeholder="Enter any comments (optional)"
+                        maxlength="100"></textarea>
+                </div>
+            </div>
+            <div class="submitButton">
+                <input type="submit" value="Submit" id="submit">
+                <input type="reset" value="Reset" id="reset">
+            </div>
+    </div>
+    </form>
+    </div>
+</body>
+
+</html>
